@@ -27,10 +27,6 @@ export class HomeComponent implements OnInit {
   constructor(private coursesStore: CoursesStore) {}
 
   ngOnInit() {
-    this.reloadCourses();
-  }
-
-  reloadCourses() {
     this.beginnerCourses$ = this.coursesStore.filterByCategory("BEGINNER");
     this.advancedCourses$ = this.coursesStore.filterByCategory("ADVANCED");
   }
